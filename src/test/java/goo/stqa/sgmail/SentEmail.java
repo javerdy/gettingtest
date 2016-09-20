@@ -36,7 +36,7 @@ public class SentEmail {
         wd.findElement(By.id("Passwd")).sendKeys("ytgPVY96P4u");
         wd.findElement(By.id("signIn")).click();
         wd.get("https://mail.google.com/mail/#inbox");
-        wd.findElement(By.xpath("//div[@class='z0']//div[.='НАПИСАТЬ']")).click();
+        wd.findElement(By.xpath("//div[@class='z0']//div[.='COMPOSE']")).click();
         wd.findElement(By.id(":ck")).click();
         wd.findElement(By.id(":ck")).clear();
         wd.findElement(By.id(":ck")).sendKeys("mytesforgett@gmail.com");

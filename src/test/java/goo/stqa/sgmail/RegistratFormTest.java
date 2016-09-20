@@ -5,9 +5,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -28,7 +25,7 @@ public class RegistratFormTest {
 
     //For Chrome
     System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver_win32\\chromedriver.exe");
-     wd = new ChromeDriver();
+    wd = new ChromeDriver();
 
     //For IE
 /*    System.setProperty("webdriver.IE.driver", "C:\\Tools\\IE\\IEdriver.exe");
@@ -94,9 +91,8 @@ public class RegistratFormTest {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-
   }
+
 
   @AfterMethod
   public void tearDown() {
@@ -104,4 +100,6 @@ public class RegistratFormTest {
   }
 
 }
+
+
 
