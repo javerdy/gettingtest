@@ -28,7 +28,7 @@ public class LoginExist {
   }
 
   @Test
-  public void LoginExist() {
+  public void loginExist() {
     wd.get("https://accounts.google.com");
 
     wd.findElement(By.id("Email")).click();
