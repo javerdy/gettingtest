@@ -2,6 +2,8 @@ package goo.stqa.sgmail;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -10,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class LoginExist {
-  FirefoxDriver wd;
+  WebDriver wd;
 
   public static boolean isAlertPresent(FirefoxDriver wd) {
     try {
@@ -23,7 +25,22 @@ public class LoginExist {
 
   @BeforeMethod
   public void setUp() throws Exception {
-    wd = new FirefoxDriver();
+
+    //For Firefox
+    //wd = new FirefoxDriver();
+
+    //For Chrome
+    System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver_win32\\chromedriver.exe");
+    wd = new ChromeDriver();
+
+    //For IE
+/*    System.setProperty("webdriver.IE.driver", "C:\\Tools\\IE\\IEdriver.exe");
+    wd = new InternetExplorerDriver();*/
+
+    //For Opera
+/*    System.setProperty("webdriver.opera.driver", "C:\\Tools\\IE\\IEdriver.exe");
+    wd = new OperaDriver();*/
+
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
