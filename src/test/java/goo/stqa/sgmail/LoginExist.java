@@ -12,6 +12,15 @@ import java.util.concurrent.TimeUnit;
 public class LoginExist {
   FirefoxDriver wd;
 
+  public static boolean isAlertPresent(FirefoxDriver wd) {
+    try {
+      wd.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
   @BeforeMethod
   public void setUp() throws Exception {
     wd = new FirefoxDriver();
@@ -35,14 +44,5 @@ public class LoginExist {
   @AfterMethod
   public void tearDown() {
     wd.quit();
-  }
-
-  public static boolean isAlertPresent(FirefoxDriver wd) {
-    try {
-      wd.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
   }
 }
