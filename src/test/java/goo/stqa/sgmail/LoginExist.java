@@ -33,11 +33,11 @@ public class LoginExist {
 
     wd.findElement(By.id("Email")).click();
     wd.findElement(By.id("Email")).clear();
-    wd.findElement(By.id("Email")).sendKeys("troikaosipova@gmail.com");
+    wd.findElement(By.id("Email")).sendKeys("krutomar@gmail.com");
     wd.findElement(By.id("next")).click();
     wd.findElement(By.id("Passwd")).click();
     wd.findElement(By.id("Passwd")).clear();
-    wd.findElement(By.id("Passwd")).sendKeys("sfolyata2016");
+    wd.findElement(By.id("Passwd")).sendKeys("ytgPVY96P4u");
     wd.findElement(By.id("signIn")).click();
   }
 
