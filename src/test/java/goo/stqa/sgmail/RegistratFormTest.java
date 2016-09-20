@@ -43,9 +43,12 @@ public class RegistratFormTest {
   @Test
   public void logTest() throws Exception {
 
-    wd.get("https://gmail.com");
-    wd.findElement(By.linkText("Create account")).click();
+    goToGmail();
+    goToCreateAccount();
+    fillRegFormFromExcel();
+  }
 
+  private void fillRegFormFromExcel() {
     try {
       File file = new File("C:\\Reposit\\gettingtest\\UserData.xlsx");
       FileInputStream iFile = new FileInputStream(file);
@@ -91,6 +94,14 @@ public class RegistratFormTest {
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  private void goToCreateAccount() {
+    wd.findElement(By.linkText("Create account")).click();
+  }
+
+  private void goToGmail() {
+    wd.get("https://gmail.com");
   }
 
 
